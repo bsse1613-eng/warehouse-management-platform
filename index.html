@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouse Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .print-header {
+        display: none;
+      }
+      @media print {
+        body {
+          background-color: white !important;
+        }
+        .no-print, .no-print * {
+          display: none !important;
+        }
+        body * {
+          visibility: hidden;
+        }
+        #printable-area, #printable-area * {
+          visibility: visible;
+        }
+        #printable-area {
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          width: calc(100% - 40px);
+          color: black;
+          font-size: 10pt;
+        }
+         #printable-area h1, #printable-area h2, #printable-area h3 {
+            color: black;
+        }
+        #printable-area table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 1rem;
+        }
+        #printable-area th, #printable-area td {
+          border: 1px solid #ddd;
+          padding: 0.5rem;
+          color: black;
+          background-color: white !important;
+        }
+        #printable-area thead {
+          background-color: #f2f2f2 !important;
+          color: black;
+          -webkit-print-color-adjust: exact;
+          color-adjust: exact;
+        }
+        .print-header {
+          display: block !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.78.0",
+    "chart.js": "https://cdn.jsdelivr.net/npm/chart.js@^4.4.3/dist/chart.auto.js",
+    "chart.js/": "https://aistudiocdn.com/chart.js@^4.5.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

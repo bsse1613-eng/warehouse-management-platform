@@ -1,0 +1,5 @@
+{
+  "name": "Warehouse Management Platform",
+  "description": "A comprehensive platform for managing warehouse deliveries, purchases, employees, and generating reports and invoices. Built with React and Supabase.",
+  "requestFramePermissions": []
+}
